@@ -4,5 +4,5 @@ from blog.models import Championnat
 
 
 def liste_pays(request):
-    pays = Championnat(pays_championnat="prout")
-    return render(request, 'liste_pays.html', {'pays': pays.pays_championnat})
+    pays = Championnat(pays_championnat="prout", nom_championnat="patate")
+    return render(request, 'liste_pays.html', {'pays': pays})
