@@ -4,5 +4,5 @@ from blog.models import Championnat
 
 
 def liste_pays(request):
-    pays = Championnat.objects.all().distinct("pays_championnat").order_by("pays_championnat")
+    pays = Championnat.objects.all().distinct().order_by("pays_championnat")
     return render(request, 'liste_pays.html', {'pays': pays})
