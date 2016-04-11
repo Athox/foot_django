@@ -22,7 +22,7 @@ class Championnat(models.Model):
     type_exaequo = models.CharField(max_length=50)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'championnat'
 
 
@@ -45,7 +45,7 @@ class Equipe(models.Model):
     nb_matchp_equipe = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'equipe'
 
 
@@ -61,5 +61,5 @@ class Matchs(models.Model):
     id_championnat = models.IntegerField()
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'matchs'
