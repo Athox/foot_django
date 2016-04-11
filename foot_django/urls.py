@@ -20,4 +20,5 @@ from blog import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accueil$', views.liste_pays),
+    url(r'^championnat/(?P<pays_championnat>)$', views.list_championnat),
 ]

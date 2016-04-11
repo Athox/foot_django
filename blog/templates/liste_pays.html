@@ -1,4 +1,6 @@
 <h1>Liste des Pays</h1>
 {% for p in pays %}
-<p>{{p.pays_championnat}}</p>
+<ul>
+  <li><a href="{% url "blog.views.liste_championnat" p.pays_championnat %}">{{p.pays_championnat}}</p></li>
+</ul>
 {% endfor %}
