@@ -8,5 +8,5 @@ def liste_pays(request):
     return render(request, 'liste_pays.html', {'pays': pays})
 
 def liste_championnat(request, pays):
-    championnats = Championnat.objects.get("pays_championnat"=pays).order_by("nom_championnat")
+    championnats = Championnat.objects.get(pays_championnat=pays).order_by("nom_championnat")
     return render(request, "liste_championnat.html", {"championnats": championnats})
